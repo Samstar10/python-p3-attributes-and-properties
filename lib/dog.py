@@ -12,7 +12,7 @@ APPROVED_BREEDS = [
 ]
 
 class Dog:
-    def __init__(self, name=None, breed=None):
+    def __init__(self, name="Scooby", breed="Corgi"):
         self._name = name
         self._breed = breed
 
@@ -25,6 +25,8 @@ class Dog:
         else:
             print("Name must be string between 1 and 25 characters.")
 
+    name = property(get_name, set_name)
+
     def get_breed(self):
         return self._breed
     
@@ -34,5 +36,4 @@ class Dog:
         else:
             print("Breed must be in list of approved breeds.")
 
-    name = property(get_name, set_name,)
     breed = property(get_breed, set_breed,)

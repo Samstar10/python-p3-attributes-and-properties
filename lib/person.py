@@ -16,9 +16,9 @@ APPROVED_JOBS = [
 ]
 
 class Person:
-    def __init__(self):
-        self._name = None
-        self._job = None
+    def __init__(self, name="Samuel", job="ITC"):
+        self._name = name
+        self._job = job
 
     def get_name(self):
         return self._name
@@ -38,4 +38,5 @@ class Person:
         else: 
             print("Job must be in list of approved jobs.")
 
-    name = property(get_name, set_name,)
+    name = property(get_name, set_name)
+    job = property(get_job, set_job)
